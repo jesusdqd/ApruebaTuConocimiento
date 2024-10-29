@@ -7,10 +7,10 @@ main {
 }
 
 .imagen {
-    display: flex; 
+    display: block; 
     flex-direction: column; 
     align-items: center; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.575);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.592);
     border-radius: 20px; /* Bordes redondeados */   
 }
 
@@ -20,7 +20,6 @@ main {
     object-fit: cover; 
     border-radius: 15px; 
 }
-
 .container {
     display: flex;
     justify-content: space-between; 
@@ -29,7 +28,42 @@ main {
 }
 
 .areastxt {
-    font-family: wobblezz;
     font-size: 25px;
     color: #ffffff;
+}
+
+.Tienda .imagen {
+    transition: transform 0.3s ease;
+}
+
+.Tienda .imagen.Politica:hover {
+    transform: scale(1.15); 
+}
+
+.Tienda .imagen.Matematicas:hover {
+    transform: scale(1.15); 
+}
+
+.Tienda .imagen.Arte:hover {
+    transform: scale(1.15); 
+}
+
+.Tienda .imagen.Quimica:hover {
+    transform: scale(1.15); 
+}
+
+.Tienda .imagen.Religion:hover {
+    transform: scale(1.15); 
+}
+
+.Tienda .imagen.Lectura:hover {
+    transform: scale(1.15); 
+}
+
+.Tienda .imagen.Etica:hover {
+    transform: scale(1.15); 
+}
+
+.Tienda .imagen.Informatica:hover {
+    transform: scale(1.15); 
 }
