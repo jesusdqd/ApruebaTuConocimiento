@@ -1,25 +1,29 @@
 nav {
-    background-color: #2d0097; /* Color de fondo de la barra */
+    background-color: #1A1A1D; /* Color de fondo de la barra */
     padding: 10px; /* Espaciado interno */
     text-align: center; /* Centrar el texto */
-    margin-top: 400px; /* Desplazar la barra hacia abajo */
-    box-shadow: 0 30px 60px rgb(0, 0, 0, 0.458);
+    margin-top: 0px; /* Desplazar la barra hacia abajo */
+    border-radius: 15px;
+    box-shadow: 0 40px 100px rgba(255, 251, 0, 0.118);
+    border-bottom: 3px solid #D4AF37;
 }
 
 nav a {
     color: rgb(255, 255, 255); /* Color del texto */
     text-decoration: none; /* Sin subrayado */
-    margin: 0 40px; /* Espaciado entre enlaces */
+    margin: 0 30px; /* Espaciado entre enlaces */
     font-size: 30px; /* Tamaño de fuente */
+    display: inline-block; /* Permite aplicar padding */
+    padding: 10px; /* Espacio adicional para el área clickeable */
 }
 
 /* Estilos para el hover en los enlaces */
 nav a:hover {
-    color: #ffb100; /* Cambia el color al pasar el cursor */
-    transition: color 0.3s ease; /* Animación suave */
+    transform: scale(1.1);
+    color: #545454; /* Cambia el color al pasar el cursor */
+    transition: transform 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Estilos de la barra de búsqueda */
 .search-container {
     display: inline-flex;
     align-items: center;
@@ -29,17 +33,13 @@ nav a:hover {
 .search-border {
     display: flex;
     align-items: center;
-    background-color: white; /* Relleno blanco */
-    border-radius: 5px; /* Bordes redondeados para el contenedor */
-    padding: 5px; /* Espaciado interno */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para el contorno */
+    padding: 1px; /* Espaciado interno */
 }
 
 .search-icon {
     font-size: 24px;
     cursor: pointer;
-    color: #2d0097; /* Color del icono */
-    margin-right: 5px; /* Espaciado entre el icono y el input */
+    margin-right: 5px;
 }
 
 .search-input {
@@ -49,9 +49,8 @@ nav a:hover {
     visibility: hidden;
     border: none; /* Sin borde en el input */
     outline: none;
-    font-size: 18px;
+    font-size: 25px;
     background-color: transparent; /* Fondo transparente para el input */
-    color: #2d0097; /* Color del texto */
     transition: width 0.4s ease, opacity 0.4s ease, visibility 0.4s;
 }
 

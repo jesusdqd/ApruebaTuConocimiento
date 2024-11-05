@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+    <style>
+        
+        .chat-button{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #323232;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.5);
+        }
+
+        .chatbox{
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            max-height: 400px;
+            background-color: #1A1A1D;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .toggle-chat:checked ~ .chatbox {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chatbox-header {
+            background-color: #333;
+            padding: 10px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-chatbox {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .chatbox-body {
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 16px;
+        }
+
+        .chat-input{
+
+            border: none;
+            padding: 10px;
+            width: calc(100% - 20px);
+            border-radius: 4px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        .toggle-chat{
+            position: absolute;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle-chat" class="toggle-chat">
+
+    <label for="toggle-chat" class="chat-button">
+        <img src="/ApruebaTuConocimiento/Assets/Iconos/Barra_Navegacion/Chatbox.png" alt="Icono de Chatbox" style="margin-top: 2px;"></a>
+    </label>
+
+    <div class="chatbox">
+        <div class="chatbox-header">
+            <span>Chatbox</span>
+            <label for="toggle-chat" class="close-chatbox">×</label>
+        </div>
+        <div class="chatbox-body">
+            <p>¡Hola! Bienvenido a APRUEBA TU CONOCIMIENTO, una plataforma de aprendizaje con el objetivo de mejorar tus capacidades en el mundo del conocimiento, con dinamicas diferentes como competir con otros jugadores en juegos variados por una tabla de ranking para saber quien conoce más de un area/tema/subtema. ¿Quieres ser el primero en esta tabla? estudia más que tus competidores y se la persona con el mayor conocimiento de la plataforma y del ¡MUNDO! </p>
+        </div>
+        <input type="text" class="chat-input" placeholder="Escribe tu mensaje...">
+    </div>
+</body>
+</html>
