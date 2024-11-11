@@ -1,3 +1,12 @@
+body {
+    background-color: #1C1C1E;
+    background-image: url('https://wallpapers.com/images/hd/fondonegro-abstracto-en-4k-4kjbhsuu5ezb6u30.jpg'); /* Reemplaza con la URL de tu imagen de fondo */
+    background-size: cover; /* La imagen cubrirá toda el área del fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    font-family: 'Montserrat', sans-serif; /* Usar la fuente de Google Fonts que ya tienes */
+}
+
 .navbar {
     background-color: #1C1C1E;
     padding: 10px 20px;
@@ -25,7 +34,8 @@ nav a img {
 
 .right-links {
     display: flex;
-    gap: 20px;
+    gap: 90px;
+    margin-left: auto;
 }
 
 .nav-links li {
@@ -83,12 +93,96 @@ nav a img {
     display: block;
 }
 
-body{
-    background-color: #1C1C1E;
+/* Animación de texto */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilo de descripción y temas */
+#descripcion, #temas {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    animation: fadeInText 1s ease-out;
+}
+
+#descripcion p {
+    color: white; /* Cambia el color del texto de la descripción a blanco */
 }
 
 h1 {
     font-size: 36px;
-    color: #333;
-    margin-top: 20px;
+    text-align: center;
+    color: #D4AF37;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #D4AF37;
+}
+
+/* Estilos de los temas */
+#temas ul {
+    list-style: none;
+    padding: 0;
+}
+
+#temas > ul > li {
+    background-color: #444;
+    color: #D4AF37;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    animation: fadeInItem 0.5s ease-out;
+}
+
+@keyframes fadeInItem {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Subtemas ocultos inicialmente */
+#temas ul ul {
+    display: none;
+    padding-left: 20px;
+}
+
+#temas ul ul li {
+    background-color: #555;
+    color: #fff;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+/* Mostrar subtemas al pasar el ratón */
+#temas > ul > li:hover > ul {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

@@ -1,3 +1,4 @@
+/* Estilos de la barra de navegación */
 .navbar {
     background-color: #1C1C1E;
     padding: 10px 20px;
@@ -6,15 +7,33 @@
     top: 0;
     z-index: 1000;
     border-bottom: 3px solid #D4AF37;
+    animation: slideInFromTop 0.5s ease-in-out;
+    display: flex;  /* Cambiar a flex para poder controlar el alineamiento de los elementos */
+    justify-content: space-between;  /* Alinea los elementos de la barra */
+    margin-left: auto;
 }
 
 .nav-links {
     list-style: none;
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Asegura que los elementos estén alineados horizontalmente */
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
     align-items: center;
     margin: 0;
     padding: 0;
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.nav-links-right {  /* Nueva clase para los elementos alineados a la derecha */
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Empuja los elementos hacia la derecha */
+}
+
+.nav-links-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 20px; /* Espacio entre los enlaces */
 }
 
 nav a img {
@@ -23,13 +42,9 @@ nav a img {
     margin-right: 15px;
 }
 
-.right-links {
+.nav-item {
     display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    margin-left: 20px;
+    align-items: center;
 }
 
 .nav-links a {
@@ -39,6 +54,8 @@ nav a img {
     display: flex;
     align-items: center;
     transition: transform 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
 }
 
 .nav-links a:hover {
@@ -46,10 +63,31 @@ nav a img {
     color: #545454;
 }
 
+/* Animación para la barra de navegación */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animación de aparición de los enlaces */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Estilos para el menú desplegable */
 .dropdown {
     position: relative;
     display: inline-block;
+    transition: transform 0.3s ease-in-out; /* Animación de tamaño para el menú completo */
 }
 
 .dropbtn {
@@ -61,17 +99,25 @@ nav a img {
     display: none;
     position: absolute;
     background-color: #1C1C1E;
-    min-width: 220px;
+    min-width: 270px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     z-index: 1;
+    animation: fadeInDropdown 0.5s ease-out;
+}
+
+/* Aumentar el tamaño del menú completo */
+.dropdown:hover {
+    transform: scale(1.1); /* Aumentar el tamaño del menú completo al pasar el ratón */
 }
 
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
-    display: block;
+    display: flex;  /* Flex para alinear icono y texto */
+    align-items: center;  /* Centrar verticalmente */
+    gap: 10px;  /* Espacio entre el icono y el texto */
     transition: background-color 0.2s;
 }
 
@@ -83,12 +129,196 @@ nav a img {
     display: block;
 }
 
-body{
-    background-color: #1C1C1E;
+/* Animación para el contenido del dropdown */
+@keyframes fadeInDropdown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
+/* Estilos del cuerpo */
+body {
+    background-color: #1C1C1E;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0;
+    background-image: url('https://wallpapers.com/images/hd/fondonegro-4k-cautivador-m8k0dox5n1m3gcbt.jpg'); /* Fondo relacionado con la ética */
+    background-size: cover;
+    background-position: center;
+    animation: backgroundSlide 10s infinite alternate;
+}
+
+/* Estilo de los encabezados */
 h1 {
     font-size: 36px;
-    color: #333;
+    color: #D4AF37;
     margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #D4AF37;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Estilos para la sección de ética */
+#descripcion {
+    padding: 20px;
+    text-align: center;
+    color: #D4AF37;
+    font-size: 18px;
+    animation: fadeInText 1s ease-out;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para destacar el texto */
+    border-radius: 10px;
+}
+
+#descripcion img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Animación para la descripción de ética */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilos de la lista de temas */
+#temas {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#temas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo de los temas */
+#temas > ul > li {
+    background-color: #333;
+    color: #D4AF37;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    animation: fadeInItem 0.5s ease-out;
+    transition: transform 0.3s ease-in-out; /* Transición al desplegar */
+}
+
+/* Animación de aparición de los temas */
+@keyframes fadeInItem {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilo de los subtemas (ocultos inicialmente) */
+#temas ul ul {
+    display: none;
+    padding-left: 20px;
+}
+
+#temas ul ul li {
+    background-color: #444;
+    color: #fff;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 6px;
+    opacity: 0;  /* Inicialmente ocultos */
+    animation: fadeInSubItem 0.5s ease-out forwards;
+}
+
+/* Animación de aparición de los subtemas */
+@keyframes fadeInSubItem {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Mostrar subtemas al pasar el mouse o hacer clic en el tema */
+#temas > ul > li:hover > ul,
+#temas > ul > li:focus-within > ul {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+    animation: slideDown 0.3s ease-in-out; /* Animación de despliegue */
+}
+
+/* Animación de deslizamiento hacia abajo */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        gap: 10px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    #temas {
+        padding: 10px;
+    }
+
+    #temas > ul > li {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    #temas ul ul li {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+/* Animación de fondo */
+@keyframes backgroundSlide {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }

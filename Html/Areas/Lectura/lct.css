@@ -1,5 +1,23 @@
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0;
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20231019/pngtree-vertically-patterned-black-with-textured-finish-image_13664909.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.nav-icon {
+    width: 32px; 
+    height: 32px; 
+    margin-right: 10px; 
+}
+
 .navbar {
-    background-color: #1C1C1E;
+    background-color: rgba(28, 28, 30, 0.8);
     padding: 10px 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     position: sticky;
@@ -46,7 +64,6 @@ nav a img {
     color: #545454;
 }
 
-/* Estilos para el menú desplegable */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -83,12 +100,50 @@ nav a img {
     display: block;
 }
 
-body{
-    background-color: #1C1C1E;
-}
-
 h1 {
     font-size: 36px;
-    color: #333;
+    color: #fff;
+    text-align: center;
     margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin: 20px auto;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.topics {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: white;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.topics ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.topics li {
+    padding: 8px 0;
+}
+
+.topics li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.topics li a:hover {
+    color: #D4AF37;
 }
