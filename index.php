@@ -12,21 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
 </head>
     <style>
-
         body {
-            cursor: url('Assets/Cursor/CursorD.cur'), auto;  
-            min-height: 100vh;
-            min-width: 100vh;
-            margin: 0;
-            
             font-family: "Montserrat", sans-serif;
             font-optical-sizing: auto;
             font-weight: 800;
             font-style: normal;
-        }
-        a{
-            cursor: url('Assets/Cursor/CursorD.cur'), auto;  
-            text-decoration: none;
         }
         .footer {
             text-align: center; 

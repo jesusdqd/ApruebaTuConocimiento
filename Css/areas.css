@@ -94,3 +94,44 @@ main {
 .Tienda .imagen:hover {
     transform: scale(1.15); 
 }
+
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px; 
+        gap: 30px; 
+    }
+
+    .imagen {
+        height: 280px;
+    }
+
+    .imagen img {
+        width: 240px; 
+        height: 240px;
+    }
+
+    .container{
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 50px; 
+        gap: 30px; 
+    }
+
+    .imagen {
+        height: 250px; 
+    }
+
+    .imagen img {
+        width: 220px; 
+        height: 220px;
+    }
+    .container{
+        margin-top: 110px;
+    }   
+}
