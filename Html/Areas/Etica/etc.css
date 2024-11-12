@@ -1,5 +1,7 @@
-/* Estilos de la barra de navegación */
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #1C1C1E;
     padding: 10px 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -7,33 +9,47 @@
     top: 0;
     z-index: 1000;
     border-bottom: 3px solid #D4AF37;
-    animation: slideInFromTop 0.5s ease-in-out;
-    display: flex;  /* Cambiar a flex para poder controlar el alineamiento de los elementos */
-    justify-content: space-between;  /* Alinea los elementos de la barra */
-    margin-left: auto;
 }
 
-.nav-links {
+.nav-links, .right-links {
     list-style: none;
-    display: flex; /* Asegura que los elementos estén alineados horizontalmente */
-    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
-    gap: 20px; /* Espacio entre los elementos */
+    gap: 20px;
 }
 
-.nav-links-right {  /* Nueva clase para los elementos alineados a la derecha */
+.right-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-links-right { 
     display: flex;
     align-items: center;
-    margin-left: auto; /* Empuja los elementos hacia la derecha */
+    margin-left: auto; 
 }
 
 .nav-links-right a {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    margin-left: 20px; /* Espacio entre los enlaces */
+    margin-left: 20px; 
+}
+
+.right-links {
+    margin-left: auto; 
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
 }
 
 nav a img {
@@ -63,7 +79,10 @@ nav a img {
     color: #545454;
 }
 
-/* Animación para la barra de navegación */
+.right-links a:hover {
+    transform: scale(1.1);
+    color: #545454;
+}
 @keyframes slideInFromTop {
     0% {
         transform: translateY(-100%);
@@ -73,7 +92,6 @@ nav a img {
     }
 }
 
-/* Animación de aparición de los enlaces */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -83,53 +101,50 @@ nav a img {
     }
 }
 
-/* Estilos para el menú desplegable */
 .dropdown {
     position: relative;
     display: inline-block;
-    transition: transform 0.3s ease-in-out; /* Animación de tamaño para el menú completo */
+    transition: transform 0.3s ease-in-out; 
 }
 
 .dropbtn {
     color: white;
-    font-size: 18px;
+    font-size: 18px; 
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #1C1C1E;
-    min-width: 270px;
+    min-width: 220px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     z-index: 1;
     animation: fadeInDropdown 0.5s ease-out;
 }
 
-/* Aumentar el tamaño del menú completo */
-.dropdown:hover {
-    transform: scale(1.1); /* Aumentar el tamaño del menú completo al pasar el ratón */
-}
-
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
-    display: flex;  /* Flex para alinear icono y texto */
-    align-items: center;  /* Centrar verticalmente */
-    gap: 10px;  /* Espacio entre el icono y el texto */
+    display: flex;  
+    align-items: center;  
+    gap: 10px;  
     transition: background-color 0.2s;
 }
 
+.dropdown:hover {
+    transform: scale(1.1);
+}
+
 .dropdown-content a:hover {
-    background-color: #ffffff1b;
+    background-color: #D4AF37;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Animación para el contenido del dropdown */
 @keyframes fadeInDropdown {
     0% {
         opacity: 0;
@@ -139,7 +154,6 @@ nav a img {
     }
 }
 
-/* Estilos del cuerpo */
 body {
     background-color: #1C1C1E;
     font-family: "Montserrat", sans-serif;
@@ -219,7 +233,7 @@ h2 {
     border-radius: 8px;
     position: relative;
     animation: fadeInItem 0.5s ease-out;
-    transition: transform 0.3s ease-in-out; /* Transición al desplegar */
+    transition: transform 0.3s ease-in-out; 
 }
 
 /* Animación de aparición de los temas */
