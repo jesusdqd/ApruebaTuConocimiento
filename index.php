@@ -17,7 +17,9 @@
             font-weight: 800;
             font-style: normal;
             margin: 0;
-        }
+        } 
+
+        /*
         footer {
             background-color: #1A1A1D; 
             text-align: center; 
@@ -28,6 +30,7 @@
             box-sizing: border-box; 
             border-bottom: 3px solid #D4AF37; 
             border-radius: 15px;
+            box-shadow: 0 40px 100px rgba(255, 251, 0, 0.118);
         }
 
       .footer-links {
@@ -49,18 +52,92 @@
             
         }
 
-      .footer-links a {
+        .footer-links a {
             color: #fff;
             text-decoration: none;
             
         }
 
-      .footer-links-container {
+        .footer-links-container {
             display: flex;
             justify-content: center;
             
         }
-        /*
+
+        header {
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        
+        nav ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-left: 10px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+      }
+
+      .about {
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .about-content {
+        flex: 3;
+      }
+
+      .columns {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        margin-top: 5px;
+      }
+
+      .column {
+        flex: 1;
+        margin: 0 20px;
+      }
+
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-left: 20px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+        */ 
+        
         .footer {
             text-align: center; 
             position: relative; 
@@ -71,13 +148,14 @@
             color: #fff; 
             font-size: 12px;
         }
-        */
+        
     </style>
 </head>
 <body>
     <?php include('Html/navbar.html'); ?>
     <?php include('Html/Areas/areas.html'); ?> 
     <?php include('chatbox.html'); ?>
+<!--
     <main>
     <footer>
     <div class="footer-container">
@@ -93,11 +171,11 @@
         </div>
     </div>
 </footer>
-<!--
+    -->
 <div class="footer">
             <p>Este proyecto se basa en una página web en la cual puedas probar, desafiar y mejorar tus límites y conocimientos a través de exámenes, juegos, quiz, etc. Al entrar por primera vez a nuestra pagina te encontraras con la posibilidad de iniciar sesión con la plataforma que quieras ya sea Google, Facebook, etc para que tengas total libertad de invitar e incluso desafiar a tus amigos, al iniciar sesión verás una amplia variedad de áreas o materias entre ellas matemáticas, biología, arte, política, informática, etc tendrás la posibilidad de escoger tu respectivo nivel o grado de dificultad la cual se ajusta adecuadamente a todas las categorías a escoger, ademas contaras con una IA la cual se encargará de evaluar tu conocimiento ya sea a través de porcentajes o mediante aprobado o reprobado, aparte de la posibilidad de hacerle preguntas de las dudas que tengas por resolver. En nuestro sitio web hay distintos tipos de juegos para entrenar tu conocimiento entre los cuales se encuentran: sopa de letras, crucigramas, verdadero o falso,juegos de memoria, juego del ahorcado, etc. Para motivarte más a desafiarte a ti y a tus amigos agregaremos una tabla de ranking en la cual podrás luchar por entrar entre los más inteligentes de nuestra plataforma.
             </p>
     </div>  
-    -->
+
 </body>
 </html>
